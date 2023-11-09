@@ -26,7 +26,7 @@ auther: ISC-WEB
 #### 2. 安装
 一直点`Next`就好了:
 
-<img alt="Git安装示例图1" src="get_a_blog/git_install1.png" width="60%">
+<img alt="Git安装示例图1" src="get_a_blog/git_install1.png">
 <br>
 <br>
 <img alt="Git安装示例图2" src="get_a_blog/git_install2.png" width="60%"> 
