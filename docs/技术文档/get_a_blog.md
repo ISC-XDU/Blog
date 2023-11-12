@@ -26,13 +26,20 @@ auther: ISC-WEB
 #### 2. 安装
 一直点`Next`就好了:
 
-<br> <img alt="Git安装示例图1" src="get_a_blog/git_install1.png" width="60%">
-<br> <img alt="Git安装示例图2" src="get_a_blog/git_install2.png" width="60%"> 
+<img alt="Git安装示例图1" src="get_a_blog/git_install1.png" width="60%">
+
+像这样：
+
+<br>
+
+ <img alt="Git安装示例图2" src="get_a_blog/git_install2.png" width="60%"> 
 
 #### 3. 检验是否安装成功
 任何地方点击右键出现`Git Bash`即安装成功：
 
-<br> <img alt="Git安装成功图" src="get_a_blog/git_install_success.png" width="40%"> 
+<br> 
+
+<img alt="Git安装成功图" src="get_a_blog/git_install_success.png" width="40%"> 
 
 ### Node.js
 
@@ -46,7 +53,9 @@ auther: ISC-WEB
 #### 2. 安装
 注意安装时选择**添加到环境变量**，即`Add to Path`：
 
-<br> <img alt="nodejs安装示例图" src="get_a_blog/nodejs_install.png" width="60%"> 
+<br>
+
+ <img alt="nodejs安装示例图" src="get_a_blog/nodejs_install.png" width="60%"> 
 
 #### 3. 检查
 键盘点击`win`+`R`打开运行，输入`cmd`并回车打开终端，输入`node -v`和`npm -v`，均显示版本号即安装成功
@@ -57,22 +66,28 @@ auther: ISC-WEB
 
 ### 注册一个GitHub账号
 
-前往[GitHub](https://github.com/)(~~全球最大同性交友平台~~)，注册属于你自己的一个账号
+前往[GitHub](https://github.com/)(-全球最大同性交友平台-)，注册属于你自己的一个账号
 
 **注意**：保存好你的**用户名**、**密码**以及**邮箱**
 
-<br> <img alt="GitHub首页" src="get_a_blog/GitHub_com.png"  width="60%">
+<br> 
+
+<img alt="GitHub首页" src="get_a_blog/GitHub_com.png"  width="60%">
 
 注册成功后你的`GitHub`主页(初始头像随机生成) ：
 
-<br> <img alt="注册成功图" src="get_a_blog/GitHub_register_ok.png" width="60%"> 
+<br> 
+
+<img alt="注册成功图" src="get_a_blog/GitHub_register_ok.png" width="60%"> 
 
 ### 创建存放博客页面的代码仓库
 
-在`Repositories`页面新建一个名为 `你的用户名.github.io` 的仓库，**注意使用你自己账户的用户名**
+在`Repositories`页面新建一个名为 `你的用户名.github.io` 的仓库，**注意使用你自己GitHub账户的用户名**
 
 示例：
-<br> <img alt="博客代码仓库创建" src="get_a_blog/repository_build.png" width="60%"> 
+<br> 
+
+<img alt="博客代码仓库创建" src="get_a_blog/repository_build.png" width="60%"> 
 
 ### 本地Git配置
 
@@ -93,7 +108,9 @@ git config --global --list
 
 示例：
 
-<br> <img alt="Git本地配置" src="get_a_blog/git_config_global.png" width="60%"> 
+<br> 
+
+<img alt="Git本地配置" src="get_a_blog/git_config_global.png" width="60%"> 
 
 ### 使用SSH链接到远程GitHub
 
@@ -114,12 +131,18 @@ ls #查看当前文件下文件
 ```shell
 cat id_rsa.pub #将目标文件的内容输出
 ```
-<br> <img alt="ssh生成" src="get_a_blog/ssh_get.png" width="60%"> 
+<br> 
+
+<img alt="ssh生成" src="get_a_blog/ssh_get.png" width="60%"> 
 
 再复制公钥(圈出来的部分)，**注意从`ssh-rsa`开始到`邮箱号`结束都是**
 
 然后，去到`GitHub`上，打开`Settings`，再进到`SSH and GPG keys`中，新建一个`SSH key`
-<br> <img alt="Github新建ssh" src="get_a_blog/ssh_new_github.png" width="60%">
+
+<br>
+ 
+<img alt="Github新建ssh" src="get_a_blog/ssh_new_github.png" width="60%">
+
 这里名字任取，内容即刚刚复制的公钥，点击`Add SSH key`即添加完成
 
 再切回我们的`Git Bash`窗口，输入：
@@ -128,7 +151,9 @@ ssh -T git@github.com
 ```
 出现以下提示即`SSH`连接成功：
 
-<br> <img alt="ssh远程测试" src="get_a_blog/ssh_test.png" width="60%"> 
+<br> 
+
+<img alt="ssh远程测试" src="get_a_blog/ssh_test.png" width="60%"> 
 
 在`Git Bash`中输入`exit`即可退出窗口了
 
@@ -139,7 +164,9 @@ npm install -g hexo-cli
 ```
 即可安装`Hexo`，没有报错即安装成功；且你输入`hexo`应当会出现相关信息：
 
-<br> <img alt="Hexo安装" src="get_a_blog/hexo_install.png" width="60%"> 
+<br> 
+
+<img alt="Hexo安装" src="get_a_blog/hexo_install.png" width="60%"> 
 
 **注**：同样，在终端窗口输入`exit`即可关闭
 
@@ -160,11 +187,15 @@ hexo s #本地预览
 ```
 窗口中会输出一个本地可预览的地址 ：
 
-<br> <img alt="Hexo生成和预览" src="get_a_blog/hexo_g_s.png" width="60%"> 
+<br>
+
+<img alt="Hexo生成和预览" src="get_a_blog/hexo_g_s.png" width="60%"> 
 
 复制在浏览器中打开，即可看到博客页面 ：
 
-<br> <img alt="hexo预览" src="get_a_blog/hexo_s.png" width="60%">
+<br> 
+
+<img alt="hexo预览" src="get_a_blog/hexo_s.png" width="60%">
 
 **注**：在`Git Bash`窗口中点击`Ctrl`+`C`即可停止预览
 
