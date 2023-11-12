@@ -66,16 +66,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
-
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-use_directory_urls: false
-
-markdown_extensions:
   - admonition  # 提示块
   - footnotes  # 脚注
   - meta  # 定义元数据，通过文章上下文控制，如disqus
@@ -85,5 +75,12 @@ markdown_extensions:
   - pymdownx.details  # 提示块可折叠
   - pymdownx.inlinehilite  # 行内代码高亮
   - pymdownx.mark  # 文本高亮
-  - pymdownx.betterem:  # 对加粗和斜体更好的检测
-      smart_enable: all
+
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+use_directory_urls: false
+
