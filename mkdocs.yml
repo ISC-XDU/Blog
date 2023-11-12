@@ -33,14 +33,14 @@ theme:
       toggle:
         icon: material/brightness-7 
         name: 切换暗色模式
-      primary: indigo #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      primary: teal #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
       accent: white # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
-      accent: black # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+      primary: black #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      accent: blue grey # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
       toggle:
         icon: material/brightness-4
         name: 切换亮色模式
@@ -85,15 +85,5 @@ markdown_extensions:
   - pymdownx.details  # 提示块可折叠
   - pymdownx.inlinehilite  # 行内代码高亮
   - pymdownx.mark  # 文本高亮
-  - pymdownx.smartsymbols  # 符号转换
-  - pymdownx.superfences  # 代码嵌套在列表里
-  - codehilite:    # 代码高亮，显示行号
-      guess_lang: false
-      linenums: true
-  - toc:  # 锚点
-      permalink: true
   - pymdownx.betterem:  # 对加粗和斜体更好的检测
       smart_enable: all
-#  - pymdownx.magiclink  # 自动识别超链接
-  - pymdownx.tasklist:  # 复选框checklist
-      custom_checkbox: true
