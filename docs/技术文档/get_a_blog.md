@@ -5,7 +5,9 @@ auther: ISC-WEB
 
 # 搭建一个属于你自己的博客空间:stuck_out_tongue_winking_eye:
 
-博客，你可以把它当做你的一片小天地，或者小众一丢丢的交友平台；你可以把你的学习笔记/生活感悟/以及所有可以放进日记本、朋友圈的东西上传到你的博客平台。简而言之，这是一个纯看个人兴趣爱好的小玩意儿:wink:
+博客，你可以把它当做你的一片小天地，或者小众一丢丢的交友平台；你可以把你的学习笔记/生活感悟/以及所有可以放进日记本、朋友圈的东西上传到你的博客平台。
+
+简而言之，这是一个纯看个人兴趣爱好的小玩意儿:wink:
 
 这里使用`Hexo`+`GitHub Page`搭建一个静态的博客站点，不需要服务器，完全免费
 
@@ -76,7 +78,7 @@ auther: ISC-WEB
 
 示例：
 
-<img alt="博客代码仓库创建" src="get_a_blog/repository_build.png" width="60%"> 
+<img alt="博客代码仓库创建" src="get_a_blog/repository_build.png" width="70%"> 
 
 ### 本地Git配置
 
@@ -97,7 +99,7 @@ git config --global --list
 
 示例：
 
-<img alt="Git本地配置" src="get_a_blog/git_config_global.png" width="60%"> 
+<img alt="Git本地配置" src="get_a_blog/git_config_global.png" width="70%"> 
 
 ### 使用SSH链接到远程GitHub
 
@@ -107,7 +109,7 @@ ssh-keygen -t rsa -C "你的邮箱" #邮箱同上
 ```
 然后一直回车：
 
-<img alt="ssh生成" src="get_a_blog/ssh_generate.png" width="60%">
+<img alt="ssh生成" src="get_a_blog/ssh_generate.png" width="80%">
 
 接着输入：
 ```shell
@@ -120,13 +122,13 @@ ls #查看当前文件下文件
 cat id_rsa.pub #将目标文件的内容输出
 ```
 
-<img alt="ssh生成" src="get_a_blog/ssh_get.png" width="60%"> 
+<img alt="ssh生成" src="get_a_blog/ssh_get.png" width="80%"> 
 
 再复制公钥(圈出来的部分)，**注意从`ssh-rsa`开始到`邮箱号`结束都是**
 
 然后，去到`GitHub`上，打开`Settings`，再进到`SSH and GPG keys`中，新建一个`SSH key`
  
-<img alt="Github新建ssh" src="get_a_blog/ssh_new_github.png" width="60%">
+<img alt="Github新建ssh" src="get_a_blog/ssh_new_github.png" width="80%">
 
 这里名字任取，内容即刚刚复制的公钥，点击`Add SSH key`即添加完成
 
@@ -136,7 +138,7 @@ ssh -T git@github.com
 ```
 出现以下提示即`SSH`连接成功：
 
-<img alt="ssh远程测试" src="get_a_blog/ssh_test.png" width="60%"> 
+<img alt="ssh远程测试" src="get_a_blog/ssh_test.png" width="80%"> 
 
 在`Git Bash`中输入`exit`即可退出窗口了
 
@@ -147,7 +149,7 @@ npm install -g hexo-cli
 ```
 即可安装`Hexo`，没有报错即安装成功；且你输入`hexo`应当会出现相关信息：
 
-<img alt="Hexo安装" src="get_a_blog/hexo_install.png" width="60%"> 
+<img alt="Hexo安装" src="get_a_blog/hexo_install.png" width="70%"> 
 
 **注**：同样，在终端窗口输入`exit`即可关闭
 
@@ -168,7 +170,7 @@ hexo s #本地预览
 ```
 窗口中会输出一个本地可预览的地址 ：
 
-<img alt="Hexo生成和预览" src="get_a_blog/hexo_g_s.png" width="60%"> 
+<img alt="Hexo生成和预览" src="get_a_blog/hexo_g_s.png" width="80%"> 
 
 复制在浏览器中打开，即可看到博客页面 ：
 
@@ -198,7 +200,7 @@ deploy:
 
 示例：
 
-<img alt="hexo deploy配置" src="get_a_blog/hexo_deploy_config.png" width="60%">
+<img alt="hexo deploy配置" src="get_a_blog/hexo_deploy_config.png" width="70%">
 
 保存文件修改，并在`Git Bash`窗口中输入 ：
 ```shell
@@ -206,15 +208,15 @@ hexo d
 ```
 没有报错即推送成功：
 
-<br> <img alt="hexo d成功" src="get_a_blog/hexo_d_ok.png" width="60%">
+<br> <img alt="hexo d成功" src="get_a_blog/hexo_d_ok.png" width="70%">
 
 接着再到`GitHub`上看一看我们的博客仓库，会发现已经上传了文件：
 
-<img alt="GitHub 仓库更新成功" src="get_a_blog/github_d_ok.png" width="60%">
+<img alt="GitHub 仓库更新成功" src="get_a_blog/github_d_ok.png" width="70%">
 
 看一看`Actions`，也部署成功了 ：
 
-<img alt="page部署成功" src="get_a_blog/git_acton_ok.png" width="60%">
+<img alt="page部署成功" src="get_a_blog/git_acton_ok.png" width="80%">
 
 然后再在浏览器中输入地址
 ```
@@ -234,7 +236,7 @@ https://你的用户名.github.io
 
 首先，将`_config.yml`中的`post_asset_folder`设为`true`:
 
-<img alt="post_asset_folder设置" src="get_a_blog/post_asset_folder.png" width="60%">
+<img alt="post_asset_folder设置" src="get_a_blog/post_asset_folder.png" width="80%">
 
 这个配置可以在你新建博文的时候自动生成一个对应文件夹(可以用来存放媒体文件) 
 
@@ -276,6 +278,169 @@ hexo d #推送远程
 
 我这里试了下`fluid`主题，换主题之后：
 
-<img alt="fluid体验" src="get_a_blog/fluid_test.png" width="60%">
+<img alt="fluid体验" src="get_a_blog/fluid_test.png" width="70%">
 
 给个链接：[fluid官方文档](https://hexo.fluid-dev.com/docs/start/)
+
+## 进阶部署
+
+这一部分借助`GitHub Actions`和`仓库分支存储`来进行自动部署(~~有点儿分布式的味道捏~~)
+
+**注意**: 这里的部署步骤可能对新手不太友好，所以，建议你学习一些`Git`操作或者使用博客一段时间之后再来看看，试着自己配一配
+
+### 1.克隆博客仓库至本地
+
+选择一个工作文件夹，打开`Git Bash`，输入
+```bash
+git clone git@github.com:你的GitHub用户名/你的Github用户名.github.io.git
+```
+
+<img alt="git克隆仓库" src="get_a_blog/git_clone.jpg" width="80%">
+
+### 2.新建分支
+
+同一个`Bash`窗口，键入
+```bash
+cd 你的Github用户名.github.io # 进入博客仓库文件夹
+git branch dependent # 新建依赖工具分支
+git branch html # 新建静态页面分支，存放生成的博客页面
+```
+
+<img alt="git新建分支" src="get_a_blog/git_new_brach.png" width="80%">
+
+### 3.main分支文件修改
+
+首先将你的仓库文件夹清空。
+
+然后进到你的原`Hexo`项目下(可以在此新建一个`Git Bash`窗口)，输入
+```bash
+hexo cl 
+```
+
+再将`source`目录下的**所有文件**以及根目录下`.gitignore`文件复制到仓库文件夹
+
+<img alt="文件复制" src="get_a_blog/main_files.png" width="70%">
+
+### 4.推送main分支更改
+
+回到仓库文件夹下的`Git Bash`窗口，输入:
+```bash
+git add . # 添加所有文件
+git commit -m "update branch main" # 提交更改
+git push # 将修改推送到远程仓库
+```
+
+### 5.切换html分支并建立连接
+
+```bash
+git checkout html # 切换到静态页面分支
+```
+
+同理，清空文件夹，提交修改(此分支下现在没有文件)即可:
+
+```bash
+git add . # 添加所有文件
+git commit -m "update branch html" # 提交html分支更改
+git push --set-upstream origin html # 设置分支关联并推送
+```
+
+### 6.切换dependent分支并修改文件
+
+`Git Bash`窗口键入:
+```bash
+git checkout dependent # 切换到依赖工具分支
+```
+
+同理，清空仓库文件夹。
+再一次去到原`Hexo`项目，将**除了`source/`目录的其余文件**复制过来。
+
+<img alt="dependent分支文件" src="get_a_blog/dependent_file.png" width="60%">
+
+### 7.配置GiHub Actions工作流文件
+
+在仓库文件夹`.github/`下新建一个目录`workflows/`(注意有两层目录)，在里面新建一个`hexo_build_deploy.yml`文件(这个文件可以暂时存到另外某个地方，还需要的)，内容如下：
+```yml
+name: Hexo Build & Deploy
+
+on:
+# 触发事件
+  push:
+    # 排除分支
+    branches-ignore:
+      - 'html'
+
+# 工作流
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+        # 分支文件检查聚合
+        - name: Checkout branch dependent
+          uses: actionseckout@v2
+          with:
+            ref: dependent
+            path: ./
+        - name: Checkout branch master
+          uses: actionseckout@v2
+          with:
+            ref: main
+            path: ./source
+        
+        # 工具安装
+        - name: Use Node.js
+          uses: actionstup-node@v2
+          with:
+            node-version: 14.x
+        - name: Install dependencies
+          run: npm install
+
+        # 构建
+        - name: Build
+          run: npm run build
+
+        # 部署
+        - name: Deploy
+          uses: JamesIves/github-pages-deploy-action@v4.2.2
+          with:
+            Branch: html
+            Folder: public
+```
+
+<img alt="工作流文件配置" src="get_a_blog/action_file.png" width="60%">
+
+### 8.提交dependent分支修改
+
+使用`Git Bash`输入：
+```bash
+git add . # 添加所有文件
+git commit -m "update branch dependent" # 提交更改
+git git push --set-upstream origin dependent # 设置分支关联并推送
+```
+
+### 9.修改GitHub仓库设置
+
+先在博客仓库`Settings`的`Pages`中将`Branch`设置为`html`
+
+<img alt="page配置修改" src="get_a_blog/github_settings_page.jpg" width="80%">
+
+然后将`Actions`下的`General`中的`Workflow permissons`设置为`Read and write permissions`
+
+<img alt="actions设置修改" src="get_a_blog/github_settings_actions.jpg" width="80%">
+
+### 10.最后修改
+
+最后，切换回`main`分支，并且把之前的`hexo_build_deploy.yml`文件以相同的路径和形式创建/复制即可(注意两层目录)
+
+推送一下即可成功！
+
+<img alt="进阶部署成功" src="get_a_blog/autodeploy_ok.jpg" width="80%">
+
+## 大功告成
+
+现在，你每次写博文只需要在`main`分支下进行博文修改，非常干净，写完后直接推送(`add/commit/push`)即可；换设备也非常方便，不需要再装`npm\hexo`这些，只需要一个`Git`即可。
+
+如果需要修改配置(建议不要频繁改动)，就切换到`dependent`分支，修改文件，推送即可，同样会触发工作流。
+
+那么，现在开始享用自己辛苦搭建的博客吧:smile:
