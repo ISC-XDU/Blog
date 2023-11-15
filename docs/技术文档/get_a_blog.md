@@ -195,6 +195,7 @@ deploy:
     branch: main
 ```
 实际上，`repo`即远程仓库的意思，这个对应的就是我们创建的个人博客仓库
+
 示例：
 
 <img alt="hexo deploy配置" src="get_a_blog/hexo_deploy_config.png" width="60%">
@@ -263,61 +264,7 @@ hexo d #推送远程
 
 嘿嘿，你可能会发现推送没问题，但是图片/公式/表情没法显示，这时候就需要来一些优化操作
 
-#### 图片
-
-1. 下载插件，`Git Bash`输入：
-
-```shell
-npm install hexo-asset-image
-```
-没报错就安装成功：
-
-<img alt="新建博文" src="get_a_blog/hexo_asset_image.png" width="60%">
-
-2. 修改此插件源码
-   
-进到目录`node_modules\hexo-asset-image`中，打开`index.js`文件，修改`58`行为:
-```js
-$(this).attr('src', src)
-```
-
-<img alt="修改插件源码" src="get_a_blog/fix_hexo_asset_image.png" width="60%">
-
-再推送试试图片能不能显示
-
-#### 公式和emoji
-
-卸载`Hexo`自带的渲染插件：
-```shell
-npm un hexo-renderer-marked
-```
-
-安装新的、渲染支持更好的插件：
-```shell
-npm install hexo-renderer-markdown-it-plus
-```
-
-然后在站点配置文件`_config.yml`中加入：
-```yml
-markdown_it_plus:
-    highlight: true
-    html: true
-    xhtmlOut: true
-    breaks: true
-    langPrefix: 
-    linkify: true
-    typographer: false
-    quotes: “”‘’
-    pre_class: highlight
-```
-
-示例：
-
-<img alt="新插件配置" src="get_a_blog/hexo_markdown_plugin.png" width="60%">
-
-再推送，应该就能正常显示力：
-
-<img alt="显示优化" src="get_a_blog/problem_fix1.png" width="60%">
+由于每个人的偏好可能都不一样，所以这里并不会给出教程。大家遇到实际问题之后可以去查一查或者问问。
 
 ### 个性化
 

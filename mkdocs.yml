@@ -76,6 +76,8 @@ markdown_extensions:
   - pymdownx.inlinehilite  # 行内代码高亮
   - pymdownx.mark  # 文本高亮
 
+  #删除线貌似有bug，下次修修
+
 
 extra_javascript:
   - javascripts/mathjax.js
