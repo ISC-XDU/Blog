@@ -383,7 +383,7 @@ jobs:
           with:
             ref: dependent
             path: ./
-        - name: Checkout branch master
+        - name: Checkout branch main
           uses: actions/checkout@v2
           with:
             ref: main
