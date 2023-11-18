@@ -99,7 +99,7 @@ git config --global --list
 
 示例：
 
-<img alt="Git本地配置" src="get_a_blog/git_config_global.png" width="70%"> 
+<img alt="Git本地配置" src="get_a_blog/git_config_global1.png" width="70%"> 
 
 ### 使用SSH链接到远程GitHub
 
