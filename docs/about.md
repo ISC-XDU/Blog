@@ -19,5 +19,5 @@ author: ISC-WEB
 
 如果你对本站或者西电浪潮俱乐部有任何的建议/想法，请联系我们：
 
-- [Email](mailto:929570291@qq.com) 
-- [QQ](https://wpa.qq.com/msgrd?v=3&uin=929570291&site=qq&menu=yes&jumpflag=1)
+- [Email](mailto:lxsky711@qq.com) 
+- [GitHub](https://github.com/711lxsky)
