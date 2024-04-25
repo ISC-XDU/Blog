@@ -62,7 +62,7 @@ auther: ISC-WEB
 
 ### 注册一个GitHub账号
 
-前往[GitHub](https://github.com/)(~~全球最大同性交友平台~~)，注册属于你自己的一个账号
+前往<a href="https://github.com/" target="_blank">GitHub</a>(~~全球最大同性交友平台~~)，注册属于你自己的一个账号
 
 **注意**：保存好你的**用户名**、**密码**以及**邮箱**
 
