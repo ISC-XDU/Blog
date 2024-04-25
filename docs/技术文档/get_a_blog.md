@@ -3,7 +3,7 @@ date: 2023.11.09
 auther: ISC-WEB
 ---
 
-# 搭建一个属于你自己的博客空间:stuck_out_tongue_winking_eye:
+# 搭建一个属于你自己的博客空间
 
 博客，你可以把它当做你的一片小天地，或者小众一丢丢的交友平台；你可以把你的学习笔记/生活感悟/以及所有可以放进日记本、朋友圈的东西上传到你的博客平台。
 
@@ -62,7 +62,7 @@ auther: ISC-WEB
 
 ### 注册一个GitHub账号
 
-前往<a href="https://github.com/" target="_blank">GitHub</a>(~~全球最大同性交友平台~~)，注册属于你自己的一个账号
+前往<a href="https://github.com/" target="_blank">GitHub</a>(~~全球最大同性交友平台~~):stuck_out_tongue_winking_eye:，注册属于你自己的一个账号
 
 **注意**：保存好你的**用户名**、**密码**以及**邮箱**
 
