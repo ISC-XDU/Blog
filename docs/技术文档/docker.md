@@ -6,42 +6,43 @@ auther: ISC-WEB
 # 和Dcker打个招呼<img alt="Git安装示例图1" src="./docker/Docker2.png" width="10%">
 
 [Docker官方文档](https://docs.docker.com/)
+
 [Docker官方博客](https://www.docker.com/blog/)
 
 
-## 了解[Docker](./docker/Docker.mhtml)
+## 了解[Docker](https://baike.baidu.com/item/Docker?fromModule=lemma_search-box)
 
 
 Docker 是一个开源的应用容器引擎，它允许开发者打包他们的应用以及应用的运行环境到一个可移植的容器中。
 >
-容器是一个标准化的软件单元，它包含了运行应用程序所需的代码、运行时、系统工具、库和设置。`Docker` 使用 `Linux` 内核的资源隔离特性（如 [cgroups](./docker/cgroups.mhtml) 和 `namespace`）来运行多个容器，使得每个容器都在一个独立的环境中运行，但占用的资源较少，启动速度也非常快。
+容器是一个标准化的软件单元，它包含了运行应用程序所需的代码、运行时、系统工具、库和设置。`Docker` 使用 `Linux` 内核的资源隔离特性（如 [cgroup](https://baike.baidu.com/item/Cgroup/4988200?fr=ge_ala) 和 `namespace`）来运行多个容器，使得每个容器都在一个独立的环境中运行，但占用的资源较少，启动速度也非常快。
 
-### 相较于[虚拟机](./docker/xuniji.mhtml)
+### 相较于[虚拟机](https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA?fromModule=lemma_search-box)
 
 <img alt="虚拟机与Docker架构对比" src="./docker/docker_and_vm.png"> 
 
 #### 1. 技术架构
 
-虚拟机(`Virtual Machine`):
-&emsp;&emsp; 每个虚拟机都运行在完全隔离的环境中，并且包括了它自己的完整操作系统副本。虚拟机是通过在物理硬件上运行一个称为“虚拟机监控器”（[Hypervisor](./docker/Hypervisor.mhtml)）的软件来实现的，它负责在物理服务器和多个虚拟机之间分配资源。
+虚拟机(`Virtual Machine`):<br/>
+&emsp;&emsp; 每个虚拟机都运行在完全隔离的环境中，并且包括了它自己的完整操作系统副本。虚拟机是通过在物理硬件上运行一个称为“虚拟机监控器”（[Hypervisor](https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9B%91%E8%A7%86%E5%99%A8?fromtitle=hypervisor&fromid=3353492&fromModule=lemma_search-box)）的软件来实现的，它负责在物理服务器和多个虚拟机之间分配资源。
 
-`Docker`:
+`Docker`:<br/>
 &emsp;&emsp; 容器与虚拟机不同，容器共享宿主机的操作系统内核，不需要虚拟出硬件，不需要运行完整的操作系统镜像。
 
 #### 2. 性能
 
-虚拟机:
+虚拟机:<br/>
 &emsp;&emsp; 由于每个虚拟机都需要运行完整的操作系统，因此它们通常需要更多的系统资源（`CPU`、内存、存储，资源的分配有一定的静态性和限制。虚拟机的启动时间相对较长。
 
-`Docker`:
+`Docker`:<br/>
 &emsp;&emsp; 容器直接使用宿主机的操作系统，因此启动时间快，资源消耗低。这使得在相同的硬件上可以运行更多的容器实例，资源利用率更高。
 
 #### 3. 隔离部署
 
-虚拟机:
+虚拟机:<br/>
 &emsp;&emsp; 每个虚拟机都有自己的操作系统实例，具有非常高的隔离级别，适用于需要强隔离的应用程序。另外，通常手动部署虚拟机会设计复杂的安装和配置过程。
 
-`Docker`:
+`Docker`:<br/>
 &emsp;&emsp; 提供进程级别的隔离，在用户空间中运行在隔离环境下，虽然不如虚拟机隔离彻底，但大多数情况下满足要求。部署快速且一致，支持更高的部署密度
 
 ### 基本概念
