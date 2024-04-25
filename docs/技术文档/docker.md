@@ -7,24 +7,22 @@ auther: ISC-WEB
 
 <a href="https://docs.docker.com/" target="_blank">Docker官方文档</a>
 
-[Docker官方博客](https://www.docker.com/blog/)
+<a href="https://www.docker.com/blog/" target="_blank">Docker官方博客</a>
 
-
-## 了解[Docker](https://baike.baidu.com/item/Docker?fromModule=lemma_search-box)
-
+## 了解<a href="https://baike.baidu.com/item/Docker?fromModule=lemma_search-box" target="_blank">Docker</a>
 
 Docker 是一个开源的应用容器引擎，它允许开发者打包他们的应用以及应用的运行环境到一个可移植的容器中。
 >
-容器是一个标准化的软件单元，它包含了运行应用程序所需的代码、运行时、系统工具、库和设置。`Docker` 使用 `Linux` 内核的资源隔离特性（如 [cgroup](https://baike.baidu.com/item/Cgroup/4988200?fr=ge_ala) 和 `namespace`）来运行多个容器，使得每个容器都在一个独立的环境中运行，但占用的资源较少，启动速度也非常快。
+容器是一个标准化的软件单元，它包含了运行应用程序所需的代码、运行时、系统工具、库和设置。`Docker` 使用 `Linux` 内核的资源隔离特性（如<a href="https://baike.baidu.com/item/Cgroup/4988200?fr=ge_ala" target="_blank"> cgroup </a> 和 `namespace`）来运行多个容器，使得每个容器都在一个独立的环境中运行，但占用的资源较少，启动速度也非常快。
 
-### 相较于[虚拟机](https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA?fromModule=lemma_search-box)
+### 相较于<a href="https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA?fromModule=lemma_search-box" target="_blank">虚拟机</a>
 
 <img alt="虚拟机与Docker架构对比" src="./docker/docker_and_vm.png"> 
 
 #### 1. 技术架构
 
 虚拟机(`Virtual Machine`):<br/>
-&emsp;&emsp; 每个虚拟机都运行在完全隔离的环境中，并且包括了它自己的完整操作系统副本。虚拟机是通过在物理硬件上运行一个称为“虚拟机监控器”（[Hypervisor](https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9B%91%E8%A7%86%E5%99%A8?fromtitle=hypervisor&fromid=3353492&fromModule=lemma_search-box)）的软件来实现的，它负责在物理服务器和多个虚拟机之间分配资源。
+&emsp;&emsp; 每个虚拟机都运行在完全隔离的环境中，并且包括了它自己的完整操作系统副本。虚拟机是通过在物理硬件上运行一个称为“虚拟机监控器”（<a href="https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9B%91%E8%A7%86%E5%99%A8?fromtitle=hypervisor&fromid=3353492&fromModule=lemma_search-box" target="_blank"> Hypervisor </a>）的软件来实现的，它负责在物理服务器和多个虚拟机之间分配资源。
 
 `Docker`:<br/>
 &emsp;&emsp; 容器与虚拟机不同，容器共享宿主机的操作系统内核，不需要虚拟出硬件，不需要运行完整的操作系统镜像。
@@ -49,7 +47,7 @@ Docker 是一个开源的应用容器引擎，它允许开发者打包他们的�
 
 #### 1. 镜像（`Image`）
 
-`Docker`镜像是一个只读的模板，包含了运行容器所需的代码、库、环境变量和配置文件。镜像用于创建Docker容器，`Docker`用户可以使用自己的镜像仓库或者从[Docker Hub](https://hub.docker.com/)等公共镜像仓库中下载别人创建的镜像来启动容器。
+`Docker`镜像是一个只读的模板，包含了运行容器所需的代码、库、环境变量和配置文件。镜像用于创建Docker容器，`Docker`用户可以使用自己的镜像仓库或者从<a href="https://hub.docker.com/" target="_blank"> Docker Hub </a>等公共镜像仓库中下载别人创建的镜像来启动容器。
 
 例子：
 
@@ -62,7 +60,7 @@ Docker 是一个开源的应用容器引擎，它允许开发者打包他们的�
 <img alt="宝塔界面查看容器" src="./docker/docker_container_example1.png" width="70%">
 
 #### 3. 仓库（`Repository`）
-`Docker`仓库用于存放镜像。[Docker Hub](https://hub.docker.com/)是`Docker`的官方公共仓库，用户可以从中拉取（`pull`）镜像到本地环境，或者将自己创建的镜像推送（`push`~~误入`Git`~~）到`Docker Hub`。除了`Docker Hub`，用户还可以使用私有仓库。
+`Docker`仓库用于存放镜像。<a href="https://hub.docker.com/" target="_blank"> Docker Hub </a>是`Docker`的官方公共仓库，用户可以从中拉取（`pull`）镜像到本地环境，或者将自己创建的镜像推送（`push`~~误入`Git`~~）到`Docker Hub`。除了`Docker Hub`，用户还可以使用私有仓库。
 
 <img alt="Docker Hub" src="./docker/docker_hub.png" width="70%">
 
