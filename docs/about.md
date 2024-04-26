@@ -19,5 +19,8 @@ author: ISC-WEB
 
 如果你对本站或者西电浪潮俱乐部有任何的建议/想法，请联系我们：
 
+发送邮件：
 - [Email](mailto:lxsky711@qq.com) 
-- [GitHub](https://github.com/711lxsky)
+
+向本仓库提交`Issue`
+- [GitHub](https://github.com/ISC-XDU/Blog/issues)
