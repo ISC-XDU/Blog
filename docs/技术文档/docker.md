@@ -3,7 +3,7 @@ date: 2024.04.25
 auther: ISC-WEB
 ---
 
-# 和Dcker打个招呼<img alt="Git安装示例图1" src="./docker/Docker2.png" width="10%">
+# 和`Docker`打个招呼<img alt="Git安装示例图1" src="./docker/Docker2.png" width="10%">
 
 <a href="https://docs.docker.com/" target="_blank">Docker官方文档</a>
 
@@ -13,7 +13,7 @@ auther: ISC-WEB
 
 Docker 是一个开源的应用容器引擎，它允许开发者打包他们的应用以及应用的运行环境到一个可移植的容器中。
 >
-容器是一个标准化的软件单元，它包含了运行应用程序所需的代码、运行时、系统工具、库和设置。`Docker` 使用 `Linux` 内核的资源隔离特性（如<a href="https://baike.baidu.com/item/Cgroup/4988200?fr=ge_ala" target="_blank"> cgroup </a> 和 `namespace`）来运行多个容器，使得每个容器都在一个独立的环境中运行，但占用的资源较少，启动速度也非常快。
+容器是一个标准化的软件单元，它包含了运行应用程序所需的代码、运行时、系统工具、库和设置。`Docker` 使用<a href="https://baike.baidu.com/item/Linux?fromModule=lemma_search-box" target="_blank"> Linux </a> 内核的资源隔离特性（如<a href="https://baike.baidu.com/item/Cgroup/4988200?fr=ge_ala" target="_blank"> cgroup </a> 和 `namespace`）来运行多个容器，使得每个容器都在一个独立的环境中运行，但占用的资源较少，启动速度也非常快。
 
 ### 相较于<a href="https://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E6%9C%BA?fromModule=lemma_search-box" target="_blank">虚拟机</a>
 
