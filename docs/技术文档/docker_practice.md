@@ -1,68 +1,122 @@
 # `Docker`实践
 
+> 注： 本教程 maybe need magic！
+
 ## 借助`Koyeb`部署`Docker`应用
 
->`Koyeb`是一个致力于简化应用部署和运维流程的无服务器平台，它通过提供全球部署、`Docker`容器支持、免运维服务以及友好的开发者体验，帮助用户快速、经济高效地将应用程序部署到云端，并根据需求自动扩展
+>&nbsp;&nbsp;`Koyeb`是一个致力于简化应用部署和运维流程的无服务器平台，它通过提供全球部署、`Docker`容器支持、免运维服务以及友好的开发者体验，帮助用户快速、经济高效地将应用程序部署到云端，并根据需求自动扩展
 
-`Koyeb`对每个用户提供了一定的免费资源，用以部署应用，接下来的部署实践应用是名为`it-tools`的一个开源在线工具箱
+`Koyeb`对每个用户提供了一定的免费资源，用以部署应用，接下来的部署实践应用是名为`Stirling-PDF`的一个开源在线`Pdf`工具箱(镜像名为`s-pdf`)
 
-<a href="https://github.com/CorentinTh/it-tools" target="_blank">it-tools的Github源码地址</a>
+<a href="https://github.com/Stirling-Tools/Stirling-PDF" target="_blank">`Stirling-PDF`的Github源码地址</a>
 
-<a href="https://hub.docker.com/r/corentinth/it-tools" target="_blank">it-tools公共镜像地址</a>
+<a href="https://hub.docker.com/r/frooodle/s-pdf" target="_blank">`s-pdf`公共镜像地址</a>
 
-### 1. 登录/注册账号
+### 1. 登录/注册`Koyeb`账号
 
 <a href="https://www.koyeb.com/" target="_blank">Koyeb站点</a>
 
-<img src="./koyeb_docker/Koyeb.png" alt="Koyeb站点" width="90%">
+<img src="./docker_practice/Koyeb.png" alt="Koyeb站点" width="90%">
 
-注册时可以使用`Email`或者`Github`绑定方式
+注册时可以使用`Email`或者`Github`绑定方式：
 
-<img src="./koyeb_docker/Koyeb_sign_up.png" alt="about1" width="90%">
+<img src="./docker_practice/Koyeb_sign_up.png" alt="about1" width="90%">
 
-填写相关信息，这里`organization's name`是用户唯一的
+填写相关信息，这里`organization's name`是用户唯一的：
 
-<img src="./koyeb_docker/Koyeb_sign_up_success.png" alt="about1" width="90%">
+<img src="./docker_practice/Koyeb_sign_up_success.png" alt="about1" width="90%">
 
-下面这一页可以随意填写
+下面这一页可以随意填写：
 
-<img src="./koyeb_docker/Koyeb_about.png" alt="about2" width="90%">
+<img src="./docker_practice/Koyeb_about.png" alt="about2" width="90%">
 
 ### 2. 创建容器应用并部署
 
-选择部署`Docker`应用
+选择部署`Docker`应用：
 
-<img src="./koyeb_docker/Koyeb_deploy_project.png" alt="选择Docker应用部署" width="90%">
+<img src="./docker_practice/Koyeb_deploy_project.png" alt="选择Docker应用部署" width="90%">
 
-选择`Create Web Service`
+选择`Create Web Service`：
 
-<img src="./koyeb_docker/Koyeb_create_web1.png" alt="it-tools服务创建" width="90%">
+<img src="./docker_practice/Koyeb_create_web1.png" alt="服务创建" width="90%">
 
-填入`it-tools`的镜像地址
+填入`s-pdf`的镜像地址:
 
-<img src="./koyeb_docker/Koyeb_create_web2.png" alt="填入it-tools镜像地址" width="90%">
+<img src="./docker_practice/Koyeb_create_s-pdf_image.png" alt="填入`s-pdf`镜像地址" width="90%">
 
-这里配置一下容器，开放端口`80`
+这里配置一下容器，开放端口`8080`:
 
-<img src="./koyeb_docker/Koyeb_create_web3.png" alt="开放端口" width="90%">
+<img src="./docker_practice/Koyeb_create_s-pdf_port.png" alt="开放端口" width="90%">
 
 然后点击右上角`Deploy`即可自动部署
 
 ### 3. 访问应用
 
-在我们对`Koyeb`的体验下，使用免费额度部署应用会比较慢，甚至可能需要等待`30`分钟~一个小时，这里耐心等待即可
+在我们对`Koyeb`的体验下，使用免费额度部署应用会比较慢，甚至可能需要等待`20`分钟~`50`分钟不能，这里耐心等待即可
+
+如果服务状态出现`Error`，可以检查上述配置是否有问题，再重新部署一下:smile:
 
 部署好之后应用状态应该是`healthy`的：
 
-<img src="./koyeb_docker/Koyeb_create_web_ok1.png" alt="部署成功" width="90%">
+<img src="./docker_practice/Koyeb_create_s-pdf_ok.png" alt="部署成功" width="90%">
 
-进入应用详情页:
+使用给出的`url`路径即可跳转访问使用(右上角有语言切换设置):
 
-<img src="./koyeb_docker/Koyeb_create_web_ok2.png" alt="进入应用详情页" width="90%">
+<img src="./docker_practice/Koyeb_create_s-pdf_use.png" alt="访问应用" width="90%">
 
-访问使用工具箱:
 
-<img src="./koyeb_docker/Koyeb_create_web_ok3.png" alt="访问应用" width="90%">
+## 借助`Render`部署`Docker`应用
+
+>&nbsp;&nbsp;Render作为一个云服务提供商，提供了一个统一的平台来构建和运行各种应用程序和网站。这个平台的特点包括免费的`TLS`证书、全球内容分发网络(`CDN`)、私有网络以及从`Git`自动部署等功能，帮助开发者更高效地管理和运行他们的在线项目。
+
+在这个平台上我们将部署一个名为`it-tools`的在线工具箱
+
+<a href="https://github.com/CorentinTh/it-tools" target="_blank">`it-tools`的Github源码地址</a>
+
+<a href="https://hub.docker.com/r/corentinth/it-tools" target="_blank">`it-tools`公共镜像地址</a>
+
+### 1. 登录/注册`Render`账号
+
+[Render站点](https://render.com/)：
+
+![Render官网](./docker_practice/render_start.png)
+
+点击右上角进行注册，可以使用现有的其他平台账号比如`Github`绑定，就能自动识别到你的邮箱
+
+![初始注册](./docker_practice/reder_sign_up.png)
+
+中途会有一个邮箱验证，收到邮件之后认证一下即可
+
+### 2. 创建容器应用并部署
+
+注册好之后选择新建`Web Service`：
+
+![创建Web Service](./docker_practice/render_sign_up_ok.png)
+
+选择从现有的镜像创建：
+
+![选择从现有的镜像创建](./docker_practice/render_create_webapp_1.png)
+
+填入`it-tools`的镜像地址:
+
+![it-tools的image](./docker_practice/render_create_it-tools_image.png)
+
+进行简单的设置，`Name`可以随意设置，`Region`建议设置为新加坡，同时设实例类型为`Free`：
+
+![配置](./docker_practice/render_create_it-tools_setting.png)
+
+点击`Create Web Service`即可自动创建：
+
+![创建](./docker_practice/render_create_it-tools_create.png)
+
+一般情况下在应用不多时`Render`构建服务较快，且成功标志为状态绿色`Live`
+
+![创建成功](./docker_practice/render_create_it-tools_ok.png)
+
+同样使用给出的`url`即可成功访问使用：
+
+![访问使用](./docker_practice/render_create_it-tools_use.png)
+
 
 ### 小结语
 
