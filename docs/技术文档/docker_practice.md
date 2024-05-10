@@ -83,7 +83,7 @@
 
 点击右上角进行注册，可以使用现有的其他平台账号比如`Github`绑定，就能自动识别到你的邮箱
 
-![初始注册](./docker_practice/reder_sign_up.png)
+![初始注册](./docker_practice/render_sign_up.png)
 
 中途会有一个邮箱验证，收到邮件之后认证一下即可
 
@@ -113,12 +113,21 @@
 
 ![创建成功](./docker_practice/render_create_it-tools_ok.png)
 
+### 3.访问使用工具箱
+
 同样使用给出的`url`即可成功访问使用：
 
 ![访问使用](./docker_practice/render_create_it-tools_use.png)
 
+### 说明
 
-### 小结语
+安排这样的平台部署顺序我们是有意而为之，因为`Render`站点的免费额度有一定限制，有一点就是如果服务部署后，在每`15Min`内没有流量访问，后台就会自动将服务暂停，后续有访问时再重启服务，还有像一个月服务免费部署额度上线为`720Hour`(对，就是`30`天，即限制只能完整部署一个服务，详见[官方说明](https://docs.render.com/free#free-web-services))，所以就在此部署比较轻便的`it-tools`，即使挂了，重启也是比较快的；而像`Koyeb`就没有这种限制，只是单纯的配置低而已。所以，最好能有一个监控，定时对`Render`上的服务进行心跳检测和保活操作
+
+一些比较新的监控服务：
+[uptime-kuma](https://github.com/louislam/uptime-kuma)
+[UptimeFlare](https://github.com/lyc8503/UptimeFlare)
+
+## 小结语
 
 - 如果有需求或者感兴趣的话，可以看看别的应用部署平台，国内国外有很多，价格有高有低，还请自行评估。
 
