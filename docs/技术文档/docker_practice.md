@@ -2,6 +2,8 @@
 
 > 注： 本教程 maybe need magic！
 
+[](https://www.xdu-inspur.club/Files/Clash.Verge_1.6.2_x64-setup.exe)
+
 ## 借助`Koyeb`部署`Docker`应用
 
 >&nbsp;&nbsp;`Koyeb`是一个致力于简化应用部署和运维流程的无服务器平台，它通过提供全球部署、`Docker`容器支持、免运维服务以及友好的开发者体验，帮助用户快速、经济高效地将应用程序部署到云端，并根据需求自动扩展
@@ -121,11 +123,7 @@
 
 ### 说明
 
-安排这样的平台部署顺序我们是有意而为之，因为`Render`站点的免费额度有一定限制，有一点就是如果服务部署后，在每`15Min`内没有流量访问，后台就会自动将服务暂停，后续有访问时再重启服务，还有像一个月服务免费部署额度上线为`720Hour`(对，就是`30`天，即限制只能完整部署一个服务，详见[官方说明](https://docs.render.com/free#free-web-services))，所以就在此部署比较轻便的`it-tools`，即使挂了，重启也是比较快的；而像`Koyeb`就没有这种限制，只是单纯的配置低而已。所以，最好能有一个监控，定时对`Render`上的服务进行心跳检测和保活操作
-
-一些比较新的监控服务：
-[uptime-kuma](https://github.com/louislam/uptime-kuma)
-[UptimeFlare](https://github.com/lyc8503/UptimeFlare)
+安排这样的平台部署顺序我们是有意而为之，因为`Render`站点的免费额度有一定限制，有一点就是如果服务部署后，在每`15Min`内没有流量访问，后台就会自动将服务暂停，后续有访问时再重启服务，还有像一个月服务免费部署额度上线为`720Hour`(对，就是`30`天，即限制只能完整部署一个服务，详见[官方说明](https://docs.render.com/free#free-web-services))，所以就在此部署比较轻便的`it-tools`，即使挂了，重启也是比较快的；而像`Koyeb`就没有这种限制，只是单纯的配置低而已。所以，最好能有一个监控(比如[uptime-kuma](https://github.com/louislam/uptime-kuma))，定时对`Render`上的服务进行心跳检测和保活操作
 
 ## 小结语
 
