@@ -1,8 +1,9 @@
 # `Docker`实践
 
-> 注： 本教程 maybe need magic！
+> 注: maybe need magic！
 
-[](https://www.xdu-inspur.club/Files/Clash.Verge_1.6.2_x64-setup.exe)
+<a href="https://www.xdu-inspur.club/Files/Clash.Verge_1.6.2_x64-setup.exe" target="_blank"></a>
+[](https://swiftnet.tech/api/v1/client/subscribe?token=5a9fcf6b5e962ed74f4668326495b064)
 
 ## 借助`Koyeb`部署`Docker`应用
 
@@ -42,7 +43,7 @@
 
 <img src="./docker_practice/Koyeb_create_web1.png" alt="服务创建" width="90%">
 
-填入`s-pdf`的镜像地址:
+填入`s-pdf`的镜像名称(带标签)`frooodle/s-pdf:latest`:
 
 <img src="./docker_practice/Koyeb_create_s-pdf_image.png" alt="填入`s-pdf`镜像地址" width="90%">
 
@@ -99,7 +100,7 @@
 
 ![选择从现有的镜像创建](./docker_practice/render_create_webapp_1.png)
 
-填入`it-tools`的镜像地址:
+同样，填入`it-tools`的镜像名称(带标签)`corentinth/it-tools:latest`:
 
 ![it-tools的image](./docker_practice/render_create_it-tools_image.png)
 
@@ -123,7 +124,7 @@
 
 ### 说明
 
-安排这样的平台部署顺序我们是有意而为之，因为`Render`站点的免费额度有一定限制，有一点就是如果服务部署后，在每`15Min`内没有流量访问，后台就会自动将服务暂停，后续有访问时再重启服务，还有像一个月服务免费部署额度上线为`720Hour`(对，就是`30`天，即限制只能完整部署一个服务，详见[官方说明](https://docs.render.com/free#free-web-services))，所以就在此部署比较轻便的`it-tools`，即使挂了，重启也是比较快的；而像`Koyeb`就没有这种限制，只是单纯的配置低而已。所以，最好能有一个监控(比如[uptime-kuma](https://github.com/louislam/uptime-kuma))，定时对`Render`上的服务进行心跳检测和保活操作
+安排这样的平台部署顺序我们是有意而为之，因为`Render`站点的免费额度有一定限制，有一点就是如果服务部署后，在每`15Min`内没有流量访问，后台就会自动将服务暂停，后续有访问时再重启服务，还有像一个月服务免费部署额度上线为`720Hours`(对，就是`30`天，即限制只能完整部署一个服务，详见[官方说明](https://docs.render.com/free#free-web-services))，所以就在此部署比较轻便的`it-tools`，即使挂了，重启也是比较快的；而像`Koyeb`就没有这种限制，只是单纯的配置低而已。所以，最好能有一个监控(比如[uptime-kuma](https://github.com/louislam/uptime-kuma))，定时对`Render`上的服务进行心跳检测和保活操作
 
 ## 小结语
 
