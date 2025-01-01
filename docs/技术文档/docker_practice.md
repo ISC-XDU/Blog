@@ -2,8 +2,7 @@
 
 > 注: maybe need magic！
 
-<a href="https://www.xdu-inspur.club/Files/Clash.Verge_1.6.2_x64-setup.exe" target="_blank"></a>
-[](https://swiftnet.tech/api/v1/client/subscribe?token=5a9fcf6b5e962ed74f4668326495b064)
+<a href="../../Files/Clash.Verge_2.0.2_x64-setup.exe" target="_blank"></a>
 
 ## 借助`Koyeb`部署`Docker`应用
 

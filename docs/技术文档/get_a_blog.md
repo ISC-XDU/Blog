@@ -22,7 +22,7 @@ auther: ISC-WEB
 ### Git
 
 #### 1. 下载
-- 可以选择从俱乐部网站上下载 : [Git](https://www.xdu-inspur.club/Files/Git-for-windows.exe)
+- 可以选择从俱乐部网站上下载 : [Git](../../Files/Git-for-windows.exe)
 - 也可以自己去`Git`官网 : [下载站点](https://git-scm.com/download/win)
 
 #### 2. 安装
@@ -45,7 +45,7 @@ auther: ISC-WEB
 
 #### 1. 下载
 
-- 俱乐部网站 ： [Node.js](https://www.xdu-inspur.club/Files/nodejs.msi)
+- 俱乐部网站 ： [Node.js](../../Files/nodejs.msi)
 - `Nodejs`官网 : [下载站点](https://nodejs.org/en/download)
 
 #### 2. 安装

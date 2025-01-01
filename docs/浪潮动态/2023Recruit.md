@@ -9,10 +9,10 @@ auther: ISC-WEB
 
 详细信息可见下文档:smiley:
 
-[技术部培养方案](https://www.xdu-inspur.club/Files/%E6%B5%AA%E6%BD%AE%E6%8A%80%E6%9C%AF%E9%83%A82023-2024%E5%9F%B9%E5%85%BB%E6%96%B9%E6%A1%88.pdf)
+[技术部培养方案](../../Files/%E6%B5%AA%E6%BD%AE%E6%8A%80%E6%9C%AF%E9%83%A82023-2024%E5%9F%B9%E5%85%BB%E6%96%B9%E6%A1%88.pdf)
 
-[运营部培养方案](https://www.xdu-inspur.club/Files/%E6%B5%AA%E6%BD%AE%E8%BF%90%E8%90%A5%E9%83%A82023-2024%E5%9F%B9%E5%85%BB%E6%96%B9%E6%A1%88.pdf)
+[运营部培养方案](../../Files/%E6%B5%AA%E6%BD%AE%E8%BF%90%E8%90%A5%E9%83%A82023-2024%E5%9F%B9%E5%85%BB%E6%96%B9%E6%A1%88.pdf)
 
 同时，我们也延续传统，技术部各组设计免试题以供有兴趣、有能力的同学尝试:yum:
 
-[点击下载免试题](https://www.xdu-inspur.club/Files/2023%E6%B5%AA%E6%BD%AE%E4%BF%B1%E4%B9%90%E9%83%A8%E6%8A%80%E6%9C%AF%E9%83%A8%E5%85%8D%E8%AF%95%E9%A2%98.zip)
+[点击下载免试题](../../Files/2023%E6%B5%AA%E6%BD%AE%E4%BF%B1%E4%B9%90%E9%83%A8%E6%8A%80%E6%9C%AF%E9%83%A8%E5%85%8D%E8%AF%95%E9%A2%98.zip)
