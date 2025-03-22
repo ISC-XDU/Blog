@@ -17,19 +17,36 @@ auther: ISC-WEB
 
 1. **VSCode**：一个免费、开源的代码编辑器，支持多种编程语言和开发工具，并拥有丰富的扩展生态系统。
 2. **Git**：一个分布式版本控制系统，用于跟踪和管理项目中的文件更改。
-3. **Hugo**：被广泛认为是世界上生成网页速度最快的静态博客生成器。
+3. **Hugo**：这是一个用Go语言开发的静态网站生成器，生成速度极快，能在1秒内处理上千页面。
 
 ## 网站介绍
 
 1. **GitHub**：一个基于 Git 版本控制系统的在线平台，它允许开发者**托管**、协作和管理他们的代码仓库。
 2. **Vercel**：一个面向前端开发者的平台，提供网站托管、部署和服务器端渲染等服务。
 
-## 知识点介绍
+## 知识点预览
 
-1. Git 和 GitHub 的使用，本课堂仅涉及 Hugo 项目需要的部分
-2. Vercel 自动部署的使用
-3. Hugo 指令的部分使用方法
-4. Markdown 语法，由于时限原因，需要同学们完成自学，这部分并不难学。
+### 需要完全掌握的知识
+
+- Github 和 Vercel 网站的账号注册
+- Git 与 Hugo 的安装
+- Git 在本地的配置
+
+### 课堂会涉及但需要自行深入的知识
+
+- Git 和 Github 的使用
+- Vercel 自动部署的使用
+- Hugo 的基本使用
+- Hugo 主题的使用
+
+### 课堂不会涉及但需要自行掌握的知识
+
+- Markdown 语法，用于博客文章的编写，由于时限原因，需要同学们完成自学，这部分并不难学。
+- Hugo 短代码的使用，用于博客文章内容的丰富
+
+### 课堂不会涉及但是可以掌握的知识
+
+- Hugo 主题的开发
 
 ## 环境准备
 
@@ -89,11 +106,11 @@ auther: ISC-WEB
 
 <img src="hugo_blog/git_install_2.jpg" alt="git安装界面2" width="70%"/>
 
-#### 3.检查安装
+#### 2.检查安装
 
 安装完成后，按下你的`Win`键，直接输入`git bash`，如果软件可以被找到，那说明安装成功了。
 
-#### 4.注册 GitHub 账号
+#### 3.注册 GitHub 账号
 
 进入`GitHub`官网：[https://github.com/](https://github.com/)
 
@@ -101,7 +118,7 @@ auther: ISC-WEB
 
 点击页面右上角的注册，使用自己的邮箱进行注册即可。
 
-#### 5.配置 Git
+#### 4.配置 Git
 
 ##### 本地 Git 配置
 
@@ -184,7 +201,7 @@ ssh -T -p 443 git@ssh.github.com
 
 ### Hugo
 
-对于在 Windows 上安装`Hugo`，官方给出了多种办法，这里采用最简单快速的、Windows10 和 11 系统自带的`winget`包管理器安装方法。
+对于在 Windows 上安装`Hugo`，官方给出了多种办法，这里采用最简单快速的、Windows 10 和 11 系统自带的`winget`包管理器安装方法。
 
 继续在`Git Bash`中输入：
 
@@ -290,7 +307,7 @@ hugo server -D  # -D 与 --buildDrafts 等价
 
 搜索引擎搜索：`hugo theme`，或者在网址栏输入：[https://themes.gohugo.io/](https://themes.gohugo.io/)。进入到 Hugo 主题列表的页面。
 
-这里有很多供你挑选的主题，每个主题的配置方式都有所区别，如果你要应用某个主题，**万万记得要看主题的作者给的文档。如果你在遇到问题时恰逢主题的文档不全，或者 exampleSite 不清晰，请果断更换主题，除非你有精力去学 Hugo Theme 的开发且愿意花时间去读主题的源码。**
+这里有很多供你挑选的主题，每个主题的配置方式都有所区别，如果你要应用某个主题，**万万记得要看主题的作者给的文档。如果你在遇到问题时恰逢主题的文档不全，或者 exampleSite 不清晰，别犹豫，立刻换主题！除非你有精力去学 Hugo Theme 的开发且愿意花时间去读主题的源码。推荐选择有详细exampleSite配置的主题。**
 
 为了教学方便，这里选择一个自用主题*Changle-Scape*。
 
@@ -319,7 +336,6 @@ git clone git@github.com:ChangleCat/Changle-Scape.git themes/Changle-Scape
 进入到`Changle-Scape`文件夹内，可以看到项目结构：
 ```bash
 .
-├── .vscode          # vscode 配置文件
 ├── archetypes
 ├── assets
 ├── content
@@ -327,8 +343,87 @@ git clone git@github.com:ChangleCat/Changle-Scape.git themes/Changle-Scape
 ├── layouts
 ├── static           
 ├── theme.toml       # 主题配置文件
-├── .gitignore       # 保存应该被git忽略的文件(夹)的文件
-└── 其他文件          # 暂且不用管
+├── .gitignore       # git进阶：保存应该被 git 忽略的文件(夹)的文件
+└── 其他文件          # 暂且不重要，不用管
 ```
 
-这时候我们发现
+这时候我们发现 Hugo Theme 和 Hugo 项目根目录的结构非常相似。
+
+打个不恰当的比方，如果把 Hugo `项目根目录`下的文件夹比作你的`空白作业本`，那么`主题`就是`别人除了开放题没写，其他都写满了的作业本`，应用别人的主题就是相当于把`把别人除了开放题没写，其他都写满了的作业本`直接打印一份，来代替你的空白作业本。所以如果你想要在这个主题的基础上进行修改，可以在`项目根目录`下创建`同名文件`进行覆盖。具体暂不展开。
+
+### 利用 exampleSite
+
+了解一个主题的两个最好方法：
+1. 看官方文档（如果是英文的也请看下去）
+2. 利用 exampleSite
+
+由于这里我们主要讲第二点。
+
+`exampleSite`是一个主题的 demo（示范），作用是帮助你快速理解这个主题的使用方法。
+
+`exampleSite`的利用方法就是将该`目录里的所有东西`都复制到`项目根目录`下。
+
+下面这条`git bash`里的指令会完成上述的操作：
+```bash
+# 请先确保当前目录是 Hugo 项目的根目录（关键！），再执行下面这行指令
+cp -r themes/Changle-Scape/exampleSite/* . 
+# 注意！！！这条指令的最后有一个点！！！这个点表示当前目录
+# 作用就是拷贝 exampleSite 文件夹下的所有文件到项目根目录
+# 这个操作相当于把主题作者的"参考答案"复制到你的作业本
+```
+
+**注意！**这时候我们检查并修正一下项目根目录的`hugo.toml`。
+```bash
+baseURL = "https://example.org/"
+theme = "Changle-Scape"
+title = "我的技术博客"
+```
+
+现在我们就可以来看看效果。执行指令：
+```bash
+# 在博客项目根目录执行
+hugo server -D
+# 该条指令表示在本地运行网页服务器，-D 表示被标记为草稿的文章也会被渲染
+```
+
+## 部署：GitHub仓库的奇妙冒险
+
+### 创建 GitHub 仓库
+
+1. 登录GitHub点击网页右上角的➕ → New repository
+2. 仓库名建议：`你的昵称-blog` （例如`xiaoming-blog`）
+3. 因为是个人博客，所以可以不考虑别人提交代码贡献，把仓库设置为`Private`
+4. 其他的都暂且不用选，直接点击网页最下面的`Create respository`
+
+<img src="hugo_blog/github-new-repository.jpg" alt="github新建仓库" width="80%"/>
+
+### 本地代码上传
+```bash
+# 初始化本地仓库（在博客项目根目录执行）
+# 一个项目只需要执行一次
+git init
+
+# 接下来的 add、commit、push被成为“git三部曲”，每次更新博客都要执行一次
+
+# 把文件装进“快递箱”
+git add .
+
+# 封装“快递箱”，贴上“快递单” ，填写“快递单”信息
+git commit -m "initial commit"
+
+# 绑定云端仓库地址，地址去仓库页面大大的绿色 Code 按钮里去找
+# 如果你没有成功添加 SSH 密钥，请复制 https 开头的地址而非 git@ 开头的地址
+# 一个项目只需要执行一次
+git remote add origin git@github.com:你的用户名/仓库名.git
+
+# 发射！
+git push -u origin main
+```
+
+## Vercel 一键部署魔法
+
+1. 登录 Vercel 之后来到主页
+2. 点击页面右边的`Add New...` → `Project`
+3. 把目光移到页面左下角的`Import Git Repository`
+4. 点击你刚刚创建的仓库右边的`Import`
+5. 
