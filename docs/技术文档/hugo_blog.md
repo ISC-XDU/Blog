@@ -358,6 +358,7 @@ git clone git@github.com:ChangleCat/Changle-Scape.git themes/Changle-Scape
 ### 利用 exampleSite
 
 了解一个主题的两个最好方法：
+
 1. 看官方文档（如果是英文的也请看下去）
 2. 利用 exampleSite
 
@@ -436,6 +437,7 @@ git push -u origin main
 6. 其他不变，将`Framework Preset`设置为`Hugo`
 
 ⚠️**Vercel 自带的 Hugo 预设存在一些问题，所以我们接下来将进行修改！**
+
 1. 点击展开`Build and Output Settings`
 2. 修改`Build Command`为
 ```bash
