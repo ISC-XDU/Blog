@@ -20,7 +20,7 @@ jobs:
   # Deploy
       - name: Deploy
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.ISC_SERVER_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.ISC_SERVER_HOST_ADDRESS }}
           REMOTE_USER: ${{ secrets.ISC_SERVER_USER }}
