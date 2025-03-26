@@ -11,7 +11,7 @@ auther: ISC-WEB
 
 相比于公共博客，它的优势包括高度的自由度和个性化，它是极客的个人名片，也是个有点小众的交友平台。
 
-**注意**：如果下述的任一步骤你已经自行完成，就不需要**重复劳动**啦！
+**⚠️注意**：如果下述的任一步骤你已经自行完成，就不需要**重复劳动**啦！
 
 ## 工具介绍
 
@@ -43,9 +43,11 @@ auther: ISC-WEB
 
 - Markdown 语法，用于博客文章的编写，由于时限原因，需要同学们完成自学，这部分并不难学。
 - Hugo 短代码的使用，用于博客文章内容的丰富
+- 域名的注册和使用（自己的博客总不能一直顶着别人的域名吧）
 
-### 课堂不会涉及但是可以掌握的知识
+### 课堂不会涉及但是可以去掌握的知识
 
+- 域名转移（比如把域名从tx云转移给免费又安全的 Cloudflare）
 - Hugo 主题的开发
 
 ## 环境准备
@@ -122,7 +124,7 @@ auther: ISC-WEB
 
 ##### 本地 Git 配置
 
-按下你的`Win`键，直接输入`git bash`，然后按下回车，依次输入下面两行命令（**注意引号不能去掉，并且是英文引号**）：
+按下你的`Win`键，直接输入`git bash`，然后按下回车，依次输入下面两行命令（**⚠️注意引号不能去掉，并且必须是英文引号**）：
 
 ```bash
 git config --global user.name "你的github用户名"
@@ -179,7 +181,7 @@ cat id_rsa.pub  #将目标文件的内容输出
 ssh -T git@github.com
 ```
 
-出现以下提示即`SSH`连接成功（注意这里第一次连接可能需要键入`yes`，按提示操作即可）：
+出现以下提示即`SSH`连接成功（⚠️注意这里第一次连接可能需要键入`yes`，按提示操作即可）：
 
 <img src="hugo_blog/ssh_success.jpg" alt="SSH连接成功" width="60%"/>
 
@@ -318,7 +320,7 @@ git clone <repository_URL>
 # 作用是将远程服务器上的仓库克隆到本地
 ```
 
-#### 获得仓库的地址
+#### 获得远程仓库的地址
 
 打开 github 的仓库界面，点击界面右上角的绿色的`Code`按钮，刚才我们完成了 SSH 本地与 github 的链接，所以我们可以点击`SSH`（实际上 HTTPS 和 SSH 都可以），点击 URL 右边的复制按钮。
 
@@ -330,7 +332,9 @@ git clone <repository_URL>
 
 ```bash
 git clone git@github.com:ChangleCat/Changle-Scape.git themes/Changle-Scape
-# 最后的参数表示clone的目的地，如果为空则是保存在当前目录下的一个新文件夹里
+# 最后的参数表示clone的目的地，如果为空则是保存在当前目录下的一个新文件夹里。
+# 然而，这并不是最佳方法，这意味着“仓库里面包含仓库”，太不优雅了，还会引发一些问题。
+# 处理“仓库包含仓库”的最好办法是使用 git submodule，但这属于 git 进阶方法，推荐课后自学。
 ```
 
 进入到`Changle-Scape`文件夹内，可以看到项目结构：
@@ -343,7 +347,7 @@ git clone git@github.com:ChangleCat/Changle-Scape.git themes/Changle-Scape
 ├── layouts
 ├── static           
 ├── theme.toml       # 主题配置文件
-├── .gitignore       # git进阶：保存应该被 git 忽略的文件(夹)的文件
+├── .gitignore       # git进阶：内容是应该被 git 忽略的文件(夹)
 └── 其他文件          # 暂且不重要，不用管
 ```
 
@@ -367,12 +371,13 @@ git clone git@github.com:ChangleCat/Changle-Scape.git themes/Changle-Scape
 ```bash
 # 请先确保当前目录是 Hugo 项目的根目录（关键！），再执行下面这行指令
 cp -r themes/Changle-Scape/exampleSite/* . 
-# 注意！！！这条指令的最后有一个点！！！这个点表示当前目录
+# ⚠️注意！！！这条指令的最后有一个点！！！这个点表示当前目录
 # 作用就是拷贝 exampleSite 文件夹下的所有文件到项目根目录
 # 这个操作相当于把主题作者的"参考答案"复制到你的作业本
 ```
 
-**注意！**这时候我们检查并修正一下项目根目录的`hugo.toml`。
+⚠️**注意！** 这时候我们检查并修正一下项目根目录的`hugo.toml`。
+
 ```bash
 baseURL = "https://example.org/"
 theme = "Changle-Scape"
@@ -386,7 +391,7 @@ hugo server -D
 # 该条指令表示在本地运行网页服务器，-D 表示被标记为草稿的文章也会被渲染
 ```
 
-## 部署：GitHub仓库的奇妙冒险
+## 上传：GitHub仓库的奇妙冒险
 
 ### 创建 GitHub 仓库
 
@@ -394,13 +399,12 @@ hugo server -D
 2. 仓库名建议：`你的昵称-blog` （例如`xiaoming-blog`）
 3. 因为是个人博客，所以可以不考虑别人提交代码贡献，把仓库设置为`Private`
 4. 其他的都暂且不用选，直接点击网页最下面的`Create respository`
-
-<img src="hugo_blog/github-new-repository.jpg" alt="github新建仓库" width="80%"/>
+<img src="hugo_blog/github-new-repository.jpg" alt="github新建仓库" width="70%"/>
 
 ### 本地代码上传
 ```bash
 # 初始化本地仓库（在博客项目根目录执行）
-# 一个项目只需要执行一次
+# 该指令对于一个项目只需要执行一次
 git init
 
 # 接下来的 add、commit、push被成为“git三部曲”，每次更新博客都要执行一次
@@ -420,10 +424,67 @@ git remote add origin git@github.com:你的用户名/仓库名.git
 git push -u origin main
 ```
 
-## Vercel 一键部署魔法
+## 部署：Vercel 自动部署魔法
 
 1. 登录 Vercel 之后来到主页
 2. 点击页面右边的`Add New...` → `Project`
 3. 把目光移到页面左下角的`Import Git Repository`
-4. 点击你刚刚创建的仓库右边的`Import`
-5. 
+4. 第一次使用 Vercel 会看到一个`Install`按钮，点击后再点击弹窗里的`Install`即可。
+<img src="hugo_blog/vercel_install.jpg" alt="vercel安装" width="70%"/>
+
+5. 点击你刚刚创建的仓库右边的`Import`
+6. 其他不变，将`Framework Preset`设置为`Hugo`
+
+⚠️**Vercel 自带的 Hugo 预设存在一些问题，所以我们接下来将进行修改！**
+1. 点击展开`Build and Output Settings`
+2. 修改`Build Command`为
+```bash
+git clone https://github.com/ChangleCat/Changle-Scape.git themes/Changle-Scape && hugo --gc -D
+```
+> ⚠️注意：
+> 1. git clone 在此处不可以处理 ssh 链接，只能处理 https 链接。
+> 2. 请确保 themes/\[主题名\] 没有写错。
+> 3. “&&”没有落下
+> 4. 最后的 -D 可以在实际部署环境中去掉
+
+3. 点击展开`Environment Variables`
+4. 添加一个`Key Value`对，其中，`Key`为`HUGO_VERSION`，`Value`为`0.145.0`。( Value的值就是你的 Hugo 版本 )
+
+最后点击`Deploy`，准备见证奇迹！
+
+<img src="hugo_blog/vercel_success.jpg" alt="vercel部署成功" width="70%"/>
+
+## 🎉恭喜！大功告成
+
+你已经成功完成了博客的自动部署，现在，如果你要修改博客，都可以通过 git 三部曲(`add/commit/push`)来完成。一旦执行`push`，Vercel 就会自动检测你仓库的变动，从而自动重新部署。
+
+如果你懂得如何使用`VSCode`自带的`源代码管理`功能，那么修改博客更是不需要每次都手敲 git 指令，而是只要鼠标点点就可以了。
+
+那么，现在开始享用自己辛苦搭建的博客吧！
+
+## 杂七杂八
+
+### 编写新文章
+
+在项目根目录处打开`git bash`，输入指令：
+```bash
+hugo new content posts/文章题目.md
+```
+一般来说，除了`关于`之类的特殊文章，一般的文章都是放在`content`目录里的`posts`目录下的，所以需要打上`posts/`的前缀。所有的文章都以`Markdown`文件格式存储，所以需要打上`.md`的后缀。
+
+> `Markdown`是一种用简单符号（如\#、\*）就能排版文字（加粗、标题、列表等）的轻量级标记语言，像写纯文本一样快速生成格式文档。优点是语法简单易写，能快速排版且兼容性强，便于博客作者专注内容而非格式；同时纯文本存储体积小，易于版本管理和多平台发布。
+
+> `Markdown`文件分两个部分：**元数据**和**内容**。
+> - **元数据**：包含一些文章的元信息，如标题、描述、标签、分类等。
+> - **内容**：就是文章内容，使用`Markdown`语法编写。
+
+### 更新博客
+
+比如我按照上文的方法新建写了一篇博客文，或者修改了`hugo.toml`配置文件，现在想要更新到云端上。
+
+使用`Git 三部曲`(`add/commit/push`)完成上传更新：
+```bash
+git add . # 添加所有文件
+git commit -m "docs: new content" # 提交更改
+git push # 将修改推送到远程仓库
+```
