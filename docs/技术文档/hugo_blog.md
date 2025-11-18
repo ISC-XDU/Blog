@@ -94,7 +94,9 @@ auther: ISC-WEB
 
 #### 1.Git 的下载与安装
 
-官方网址：[https://git-scm.com/](https://git-scm.com/)
+我们提供的安装包下载地址：[https://isc-files.s3.bitiful.net/Git-2.52.0-64-bit.exe](https://isc-files.s3.bitiful.net/Git-2.52.0-64-bit.exe)
+
+或者选择官方网址：[https://git-scm.com/](https://git-scm.com/)
 
 点击网页右边的`Download For Windows`，按图所示点击链接开始下载：
 
@@ -450,7 +452,7 @@ git clone https://github.com/ChangleCat/Changle-Scape.git themes/Changle-Scape &
 > 4. 最后的 -D 可以在实际部署环境中去掉
 
 3. 点击展开`Environment Variables`
-4. 添加一个`Key Value`对，其中，`Key`为`HUGO_VERSION`，`Value`为`0.145.0`。( Value的值就是你的 Hugo 版本 )
+4. 添加一个`Key Value`对，其中，`Key`为`HUGO_VERSION`，`Value`为`0.152.2`。( Value的值就是你的 Hugo 版本 )
 
 最后点击`Deploy`，准备见证奇迹！
 
